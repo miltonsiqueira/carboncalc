@@ -1,0 +1,251 @@
+/*
+	TODO:
+		* rename carbon to carboncalc
+		* rename classes with "kgCO2e", because it could be "kgCO2e Per Year". Use a broad term.		
+*/
+
+.carbon-div-main {
+/*
+	height: 300px;
+    width: 300px;
+*/
+	display: inline-block;
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 5px;
+}
+
+.carbon-div-main{
+  border: solid 1px #0F83CC;
+  box-shadow: 0 0 5px 1px #5FBAE4;
+  background-color: #EDF1F6;
+  overflow: auto;
+}
+
+.carbon-div-border{
+	border-radius: 5px;    
+	border: solid 1px #0F83CC;
+	margin: 2px
+}
+
+.carbon-div-main h1{
+	display: table;
+	margin: auto;
+	font-size: 30px;
+	color: #205BA8;
+}
+
+.carbon-div-main h2{
+	display: table;
+	margin: auto;
+	font-size: 20px;
+	color: #205BA8;
+}
+
+.carbon-div-main label, .carbon-div-main input, .carbon-div-main select{
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-top: 10px;
+	font-size: 15px;
+}
+
+.carboncalc-div-about-calculation{
+	font-size: 10px;
+	font-weight: bold;
+	text-align: left;
+	text-align: center;
+},
+
+.carbon-div-main label{	
+	color: #666;
+}
+
+.carbon-div-main button{
+	cursor: pointer;
+}
+
+.carbon-div-main button:hover{
+    background-color: #42B3E5;
+}
+
+.carbon-div-main button:disabled{
+	cursor: not-allowed;	
+	background-color: #3156A3;
+	color: #666679;
+}
+
+.carbon-div-main button[disabled]:hover{
+	background-color: #3156A3;	
+}
+
+.carbon-div-main input:focus, .carbon-div-main select:focus{
+	border: solid 1px #0F83CC;
+	box-shadow: 0 0 5px 1px #5FBAE4;
+}
+
+.carboncalc-input-airport{
+	width: 300px;
+}
+
+.carboncalc-input-maxlength-3{
+	width: 50px;
+}
+
+.carboncalc-input-maxlength-5{
+	width: 100px;
+}
+
+.carboncalc-input-maxlength-10{
+	width: 150px;
+}
+
+.carbon-div-main input[type="radio"] + label, .carbon-div-main input[type="checkbox"] + label{
+	margin-right: 2px;
+}
+
+.carboncalc-div-result{
+/*	display: table;*/
+	margin: 10px auto;
+	text-align: center;
+}
+
+.carboncalc-div-result-loading{
+	display: block;
+    background-image: url('ajax-loader.gif');
+	background-repeat:no-repeat;
+	width: 62px;
+	height: 62px;	
+	margin: auto;
+}
+
+.carboncalc-div-result-kgCO2e{	
+}
+
+.carboncalc-button-calculate{
+	display: table;
+	margin: 10px auto;
+	font-size: 20px !important;
+	color: #FFF;
+	margin-top: 10px;
+	border-color: #3156A3;
+	background-color: #3156A3;
+	border: 1px solid #FFF;
+	font-family: arial;	
+	font-weight: bold;		
+}
+
+.carboncalc-result-kgCO2e-value{
+	font-size: 24px;
+	color: #F63B25;
+	font-weight: bold;
+}
+
+.carboncalc-result-kgCO2e-unit{
+	font-size: 16px;	
+	color: #666;
+}
+
+.carboncalc-div-result-auxiliary{
+}
+
+.carboncalc-result-aux-value{
+	font-size: 16px;	
+}
+
+.carboncalc-result-aux-unit{
+	font-size: 14px;
+	color: #666;
+}
+
+.ui-autocomplete{
+	max-height: 200px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+.carbon-nomargin{
+	margin: 1px !important;
+}
+
+.carboncalc-button-remove{
+	background: url('minus-button-24.png') no-repeat center;
+	margin: 1px !important;	
+	height: 20px !important;
+    width: 20px !important;
+	border-style:none;
+	vertical-align: bottom;
+ /*   border-radius: 50px;	*/
+
+}
+
+.carboncalc-button-add{
+	background: url('add-button-24.png') no-repeat center;
+	margin: 1px !important;	
+	height: 20px !important;
+    width: 20px !important;
+	border-style:none;
+	vertical-align: bottom;
+}
+
+.carboncalc-button-add button:hover{
+	background-color: transparent !important;
+}
+
+.carboncalc-button-add button:disabled{
+	cursor: not-allowed;	
+	background-color: transparent !important;	
+}
+
+.carboncalc-button-add button[disabled]:hover{
+	background-color: transparent !important;	
+}
+
+.carboncalc-comparison-title{
+	font-weight: bold;
+	color: #666;
+}
+
+.carboncalc-comparison-value{
+	font-size: 16px;
+	color: #F63B25;
+}
+
+.carboncalc-comparison-unit{
+	font-size: 14px;
+	color: #666;
+}
+
+.carboncalc-offset-kgCO2e-title{
+	font-weight: bold;
+	color: #666;
+}
+
+.carboncalc-offset-kgCO2e-value{
+	font-size: 26px;
+	color: #5BA715;
+	font-weight: bold;	
+}
+
+.carboncalc-offset-kgCO2e-unit{
+	font-size: 18px;
+	color: #666;
+}
+
+
+.carboncalc-offset-kgCO2e-button{
+	color: #FFF;
+	background-color: #227D14;	
+	display: table;	
+	margin-bottom: 10px;
+	margin-top: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 24px !important;		
+	border: 1px solid #FFF;
+	font-family: arial;
+	font-weight: bold;
+	
+}
+
+.carboncalc-offset-kgCO2e-button:hover{
+    background-color: #35C51F !important;
+}
